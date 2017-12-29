@@ -24,7 +24,7 @@ test_big_endian(WORDS_BIGENDIAN)
 find_package(GMP REQUIRED)
 
 # Boost dependencies
-find_package(Boost 1.55.0 REQUIRED COMPONENTS system filesystem)
+find_package(Boost 1.54.0 REQUIRED COMPONENTS system filesystem)
 
 # LLVM dependencies
 find_package(LLVM REQUIRED CONFIG)
