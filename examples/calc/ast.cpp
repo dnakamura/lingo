@@ -11,8 +11,8 @@
 namespace calc
 {
 
-Span
-Int::span() const
+Region
+Int::region() const
 {
   std::stringstream ss;
   ss << val_;
@@ -20,22 +20,22 @@ Int::span() const
 }
 
 
-// Compute the span of a unary expression.
-Span
-Unary::span() const
+// Compute the region of a unary expression.
+Region
+Unary::region() const
 {
   Location start = location();
-  Location end = arg()->span().end_location();
+  Location end = arg()->region().end_location();
   return {start, end};
 }
 
 
-// Compute the span of a binary expression.
-Span
-Binary::span() const
+// Compute the region of a binary expression.
+Region
+Binary::region() const
 {
-  Location start = left()->span().start_location();
-  Location end = right()->span().end_location();
+  Location start = left()->region().start_location();
+  Location end = right()->region().end_location();
   return {start, end};
 }
 

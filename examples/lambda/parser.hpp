@@ -74,14 +74,16 @@ struct Parser
 
   // Name binding support.
   struct Environment {
+    Name_map name_map_;
     Environment(Parser& p)
       : parser(p)
     {
-      parser.names_.push();
+      parser.names_.push(&name_map_);
     }
 
     ~Environment()
     {
+
       parser.names_.pop();
     }
 

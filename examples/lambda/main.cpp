@@ -42,7 +42,7 @@ main(int argc, char* argv[])
 
   File input(argv[1]);
   Character_stream cs(input);
-  Token_stream ts(input);
+  Token_stream ts;
   Lexer lex(cs, ts);
   Parser parse(ts);
 

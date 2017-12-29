@@ -128,7 +128,7 @@ step_eval(Expr const* e)
     e = parse(to_string(e));
 
     // Select the sub-expression being evaluated.
-    note(next(e)->span(), "evaluating");
+    note(next(e)->region(), "evaluating");
 
     // Perform that evaluation.
     e = step(e);

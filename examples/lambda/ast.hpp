@@ -50,7 +50,7 @@ struct Expr
   virtual void accept(Visitor&) const = 0;
 
   Location     location() const { return loc_; }
-  virtual Span span() const     { return {loc_, loc_}; }
+  virtual Region region() const     { return {loc_, loc_}; }
 
   Location loc_;
 };

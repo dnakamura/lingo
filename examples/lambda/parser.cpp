@@ -293,7 +293,7 @@ parse(String const& str)
 {
   Buffer buf(str);
   Character_stream cs(buf);
-  Token_stream ts(buf);
+  Token_stream ts;
   Lexer lex(cs, ts);
   Parser parse(ts);
 
