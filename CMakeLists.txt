@@ -27,7 +27,7 @@ find_package(GMP REQUIRED)
 find_package(Boost 1.55.0 REQUIRED COMPONENTS system filesystem)
 
 # LLVM dependencies
-find_package(LLVM 3.6 REQUIRED CONFIG)
+find_package(LLVM REQUIRED CONFIG)
 llvm_map_components_to_libnames(LLVM_LIBRARIES core)
 
 # Other dependencies
