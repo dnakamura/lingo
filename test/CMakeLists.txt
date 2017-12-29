@@ -9,7 +9,7 @@ endmacro()
 
 link_libraries(lingo)
 
-add_test_program(font test_font font.cpp)
-add_test_program(string test_string string.cpp)
+#add_test_program(font test_font font.cpp)
+#add_test_program(string test_string string.cpp)
 #unicode tests is broken right now (issue related to signed/unsigned char)
-add_test_program(character_set_conversion test_character_set_conversion character_set_conversion.cpp)
+#add_test_program(character_set_conversion test_character_set_conversion character_set_conversion.cpp)
